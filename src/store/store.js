@@ -23,8 +23,15 @@ const actions = {
   }
 }
 
+const getters = {
+  notes (state) {
+    return state.notes
+  }
+}
+
 export default new Vuex.Store({
   state,
   mutations,
-  actions
+  actions,
+  getters
 })
