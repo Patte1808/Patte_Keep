@@ -14,12 +14,20 @@ const mutations = {
     }
 
     state.notes.push(newNote)
+  },
+
+  DELETE_NOTE (state, id) {
+    state.notes.splice(id, 1)
   }
 }
 
 const actions = {
   addNote ({ commit }, note) {
     commit('ADD_NOTE', note)
+  },
+
+  deleteNote ({ commit }, id) {
+    commit('DELETE_NOTE', id)
   }
 }
 
